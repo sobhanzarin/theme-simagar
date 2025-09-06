@@ -15,4 +15,5 @@ define("LB_PLUGIN_VIEW", LB_PLUGIN_DIR . "views/");
 
 if(is_admin()){
     include LB_PLUGIN_INC . 'admin/menu.php';
+    include LB_PLUGIN_INC . 'admin/metabox.php';
 }

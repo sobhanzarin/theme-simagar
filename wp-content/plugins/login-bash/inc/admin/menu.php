@@ -30,7 +30,6 @@ function lb_setting_page(){
                       $data[$key] = $value;
                   }
             }
-
             if(get_option('_lb_setting')){
                 update_option('_lb_setting', $data);
             }else{
