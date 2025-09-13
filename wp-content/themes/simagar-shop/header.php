@@ -1,3 +1,8 @@
+<?php 
+    $header_type = simagar_setting('header-type');
+    $logo = simagar_setting('logo-website');
+    $logo_width = simagar_setting('logo-width');
+?>
 <!DOCTYPE html>
 <html <?php language_attributes() ?> > 
 <head>
@@ -6,6 +11,36 @@
     <title>simagar shop</title>
     <?php wp_head(); ?>
 </head>
-<body>
-    <div>Header</div>
+<body <?php body_class() ?> >
+
+    <div>
+    <?php if($header_type == 'elementor') : ?>
+    <?php else: ?>
+        <div class="container d-flex align-items-center justify-content-between py-3">
+           <div class="d-flex align-items-center">
+                <a class="ms-4 logo-header" href="<?php echo esc_url(home_url())?>">
+                    <img width="<?php echo esc_attr($logo_width)?>px" src="<?php echo esc_url($logo['url']) ?>" alt="<?php echo esc_attr(get_bloginfo('name')) ?>">
+                </a>
+                <div class="search-holder">
+                        <form action="" id="form-search">
+                            <input class="form-control header-search-box" type="text" placeholder="دنبال چی میگردید؟">
+                            <button class="btn-search-header" type="submit"><i class="icon-header fa-solid fa-magnifying-glass"></i></button>
+                        </form>
+                </div> 
+           </div>
+            <div class="d-flex align-items-center justify-content-center"> 
+                    <a class="auth-holder" href="">
+                        <i class="icon-header fa-regular fa-user"></i>
+                        ورود | ثبت نام
+                    </a>
+                    <a class="cart-holder" href="">
+                        <i class="icon-header fa-regular fa-cart-shopping"></i>
+                        سبد خرید
+                    </a>
+            </div>
+            
+        </div>
+    <?php endif; ?>
+
+    </div>
 

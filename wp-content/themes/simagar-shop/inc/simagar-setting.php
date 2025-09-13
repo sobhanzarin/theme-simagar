@@ -22,14 +22,35 @@ if( class_exists( 'CSF' ) ) {
     'title'  => 'تب اول',
     'fields' => array(
 
-      //
-      // A text field
       array(
-        'id'    => 'opt-text',
-        'type'  => 'text',
-        'title' => 'Simple Text',
+      'id'          => 'header-type',
+      'type'        => 'select',
+      'title'       => 'نوع هدر',
+      'placeholder' => 'نوع هدر را انتخاب کنید',
+      'options'     => array(
+        'default'  => 'پیش فرض',
+        'elementor'  => 'المنتور',
       ),
+      'default'     => 'default'
+    ),
+    array(
+    'id'    => 'logo-website',
+    'type'  => 'media',
+    'title' => 'انتخاب لوگو',
+    ),
+    array(
+      'id'      => 'logo-width',
+      'type'    => 'text',
+      'title'   => 'عرض لوگو رو به PX وارد نمایید.',
+      'default' => '130'
+    ),
 
-    )
+      ),
   ) );
+} 
+
+function simagar_setting($key = "")
+{
+  $options = get_option('simagar_setting');
+  return isset($options[$key]) ? $options[$key] : null;
 }
