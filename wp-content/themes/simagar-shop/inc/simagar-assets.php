@@ -7,9 +7,9 @@ function simagar_enqueue_scripts(){
 
      // style 
     wp_enqueue_style('simagar-bootstrap', SIMAGAR_THEME_URL . "assets/css/bootstrap.min.css");
+    wp_enqueue_style('simagar-main-style', SIMAGAR_THEME_URL . "assets/css/main.css");
     wp_enqueue_style('simagar-fontawwsome', SIMAGAR_THEME_URL . "assets/css/fontawesome.css");
     wp_enqueue_style('simagar-fontawwsome-light', SIMAGAR_THEME_URL . "assets/css/light.css");
-    wp_enqueue_style('simagar-main-style', SIMAGAR_THEME_URL . "assets/css/main.css");
     wp_enqueue_style('simagar-style', get_stylesheet());
 
     // js

@@ -16,6 +16,25 @@
     <div>
     <?php if($header_type == 'elementor') : ?>
     <?php else: ?>
+         <div class="top-header py-3">
+            <div class="container d-flex align-items-center justify-content-between">
+                <p>به وب سایت سیماگر شاپ خوش آمدید.</p>
+                <div class="d-flex content-top-header">
+                    <div class="content-item ms-4">
+                        <i class="icon-header fa-regular fa-location-dot"></i>
+                        <span>به شماره ۴۲۳۶۵۱ ارسال کنید</span>
+                    </div>
+                    <div class="content-item ms-4">
+                        <i class="icon-header fa-light fa-truck"></i>
+                        <span>سفارش خود را پیگیری کنید</span>
+                    </div>
+                    <div class="content-item">
+                        <i class="icon-header fa-regular fa-badge-percent"></i>
+                        <span>تخفیفات</span>
+                    </div>
+                </div>
+            </div>
+            </div>
         <div class="container d-flex align-items-center justify-content-between py-3">
            <div class="d-flex align-items-center">
                 <a class="ms-4 logo-header" href="<?php echo esc_url(home_url())?>">
@@ -29,7 +48,8 @@
                 </div> 
            </div>
             <div class="d-flex align-items-center justify-content-center"> 
-                    <a class="auth-holder" href="">
+                  <div>
+                      <a class="auth-holder" href="">
                         <i class="icon-header fa-regular fa-user"></i>
                         ورود | ثبت نام
                     </a>
@@ -37,6 +57,7 @@
                         <i class="icon-header fa-regular fa-cart-shopping"></i>
                         سبد خرید
                     </a>
+                  </div>
             </div>
             
         </div>
