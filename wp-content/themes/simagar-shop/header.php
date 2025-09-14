@@ -49,7 +49,7 @@
            </div>
             <div class="d-flex align-items-center justify-content-center"> 
                   <div>
-                      <a class="auth-holder" href="">
+                      <a class="auth-holder" id="btn-auth" href="">
                         <i class="icon-header fa-regular fa-user"></i>
                         ورود | ثبت نام
                     </a>

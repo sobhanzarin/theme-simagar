@@ -19,7 +19,7 @@ if( class_exists( 'CSF' ) ) {
   //
   // Create a section
   CSF::createSection( $prefix, array(
-    'title'  => 'تب اول',
+    'title'  => 'هدر',
     'fields' => array(
 
       array(
@@ -43,6 +43,24 @@ if( class_exists( 'CSF' ) ) {
       'type'    => 'text',
       'title'   => 'عرض لوگو رو به PX وارد نمایید.',
       'default' => '130'
+    ),
+
+      ),
+  ) );
+    CSF::createSection( $prefix, array(
+    'title'  => 'فونت استایل',
+    'fields' => array(
+
+      array(
+      'id'          => 'font-family',
+      'type'        => 'select',
+      'title'       => 'انتخاب فونت',
+      'placeholder' => 'فونت را انتخاب کنید',
+      'options'     => array(
+        'iransans'  => 'iransans',
+        'dana'  => 'dana',
+      ),
+      'default'     => 'iransans'
     ),
 
       ),

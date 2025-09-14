@@ -1,8 +1,7 @@
-    <?php $logo = simagar_setting("logo-website");
-    ?>
+    <?php $logo = simagar_setting("logo-website");?>
     <div class="login-modal">
         <div class="body p-4">
-            <i class="close-modal d-flex align-items-center justify-content-center p-3 fa-solid fa-xmark"></i>
+            <i class="close-modal d-flex align-items-center justify-content-center p-3 fa-solid fa-xmark" id="close-modal"></i>
             <div>
                 <img src="<?php echo esc_url($logo['url']) ?>" alt="<?php echo esc_attr(get_bloginfo('name')) ?>">
             </div>
