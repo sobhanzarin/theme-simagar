@@ -16,7 +16,7 @@ function simagar_enqueue_scripts(){
     wp_enqueue_style('simagar-font-family', SIMAGAR_THEME_URL . "assets/fonts/" . $font_family . ".css", null, $theme_version);
 
     // js
-    wp_enqueue_script('simagar-jquery', SIMAGAR_THEME_URL . "assets/js/jquery-3.7.1.min.js", null, $theme_version, true);
+    wp_enqueue_script('simagar-jquery', SIMAGAR_THEME_URL . "assets/js/jquery-3.7.1.min.js", null, true);
     wp_enqueue_script('simagar-popper', SIMAGAR_THEME_URL . "assets/js/popper.min.js", null, $theme_version, true);
     wp_enqueue_script('simagar-bootstrap', SIMAGAR_THEME_URL . "assets/js/bootstrap.min.js", null, $theme_version, true);
     wp_enqueue_script('simagar-app', SIMAGAR_THEME_URL . "assets/js/app.js", null, $theme_version, true);

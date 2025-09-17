@@ -2,6 +2,11 @@
     $header_type = simagar_setting('header-type');
     $logo = simagar_setting('logo-website');
     $logo_width = simagar_setting('logo-width');
+    $auth_btn_type = simagar_setting('auth-btn-type');
+    $auth_btn_text = simagar_setting('auth-btn-text');
+    $auth_btn_link = simagar_setting('auth-btn-link');
+    $account_link = get_permalink(get_option("woocommerce_myaccount_page_id"));
+    $phone_header = simagar_setting('phone-number-header');
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes() ?> > 
@@ -11,7 +16,7 @@
     <title>simagar shop</title>
     <?php wp_head(); ?>
 </head>
-<body <?php body_class() ?> >
+<body <?php body_class(); ?> >
 
     <div>
     <?php if($header_type == 'elementor') : ?>
@@ -20,17 +25,12 @@
             <div class="container d-flex align-items-center justify-content-between">
                 <p>به وب سایت سیماگر شاپ خوش آمدید.</p>
                 <div class="d-flex content-top-header">
-                    <div class="content-item ms-4">
-                        <i class="icon-header fa-regular fa-location-dot"></i>
-                        <span>به شماره ۴۲۳۶۵۱ ارسال کنید</span>
-                    </div>
-                    <div class="content-item ms-4">
-                        <i class="icon-header fa-light fa-truck"></i>
-                        <span>سفارش خود را پیگیری کنید</span>
-                    </div>
-                    <div class="content-item">
-                        <i class="icon-header fa-regular fa-badge-percent"></i>
-                        <span>تخفیفات</span>
+                    <div class="d-flex content-item align-items-center ms-4">
+                            <span>سفارش خود را پیگیری کنید</span>
+                            <div class="me-3" >
+                                <span class="phone-header" ><?php echo esc_html($phone_header); ?></span>
+                                <i class="icon-header fa-solid fa-headset"></i>
+                            </div>
                     </div>
                 </div>
             </div>
@@ -48,20 +48,44 @@
                 </div> 
            </div>
             <div class="d-flex align-items-center justify-content-center"> 
-                  <div>
-                      <a class="auth-holder" id="btn-auth" href="">
-                        <i class="icon-header fa-regular fa-user"></i>
-                        ورود | ثبت نام
-                    </a>
-                    <a class="cart-holder" href="">
+                  <div class="d-flex align-items-center">
+                    <?php if($auth_btn_type == 'link'): ?>
+                          <!-- check login user  -->
+                        <?php if(is_user_logged_in()): ?>
+                            <a class="auth-holder" href="<?php echo esc_url($account_link);?>">
+                                <i class="icon-header fa-regular fa-user"></i>
+                               حساب کاربری
+                            </a>
+                        <?php else: ?>
+                            <a class="auth-holder" href="<?php echo esc_attr($auth_btn_link); ?>">
+                                <i class="icon-header fa-regular fa-user"></i>
+                                <?php echo esc_html($auth_btn_text); ?>
+                            </a>
+                        <?php endif; ?>
+                   
+                    <?php else: ?>
+                        <!-- check login user  -->
+                        <?php if(is_user_logged_in()): ?>
+                            <a class="auth-holder" href="<?php echo esc_url($account_link); ?>">
+                                <i class="icon-header fa-regular fa-user"></i>
+                               حساب کاربری
+                            </a>
+                        <?php else: ?>
+                          <a class="auth-holder" id="btn-auth" href="">
+                            <i class="icon-header fa-regular fa-user"></i>
+                            ورود | ثبت نام
+                        </a>
+                        <?php endif; ?>
+                    
+                    <?php endif; ?>
+                    <a class="me-2 cart-holder" href="">
                         <i class="icon-header fa-regular fa-cart-shopping"></i>
-                        سبد خرید
                     </a>
                   </div>
             </div>
             
         </div>
-    <?php endif; ?>
+    <?php endif;?>
 
     </div>
 

@@ -72,6 +72,7 @@ a{
 }
 .icon-header{
     color: #008ECC;
+    font-size: 15px;
 }
 .top-header {
     background-color:  #F5F5F5;
@@ -79,6 +80,7 @@ a{
 }
 .top-header p{
     color: #666666;
+    font-size: 13px;
 }
 .content-top-header{
     font-size: 13px;
@@ -139,4 +141,42 @@ position: absolute;
 .login-modal .title-login-modal{
     font-size: 20px;
     font-weight: 600;
+}
+.phone-header{
+    font-size: 16px;
+    color: #008ECC;
+}
+a.auth-holder{
+    background-color: #008ECC;
+    box-shadow: 0 0 10px #b3b3b321;
+    padding: 12px 12px;
+    border-radius: 8px;
+    color: #fff;
+    transition: all 0.3s ease;
+    font-size: 15px;
+}
+a.auth-holder:hover {
+    opacity: 0.8 !important;
+    transition: all 0.3s ease;
+}
+.auth-holder .icon-header{
+    color: #fff;
+}
+.cart-holder {
+    background-color: #008fcc25;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+        transition: all 0.3s ease;
+}
+.cart-holder:hover{
+    background-color: #008fcc34;
+        transition: all 0.3s ease;
+}
+.cart-holder i{
+    color: #008fcc;
 }

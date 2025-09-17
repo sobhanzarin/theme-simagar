@@ -44,11 +44,40 @@ if( class_exists( 'CSF' ) ) {
       'title'   => 'عرض لوگو رو به PX وارد نمایید.',
       'default' => '130'
     ),
-
+    
+     array(
+      'id'          => 'auth-btn-type',
+      'type'        => 'select',
+      'title'       => 'نوع دکمه حساب کاربری',
+      'placeholder' => 'نوع دکمه را انتخاب کنید',
+      'options'     => array(
+        'modal'  => 'مدال بازشونده',
+        'link'  => 'لینک سفارشی',
       ),
-  ) );
+      'default'     => 'modal'
+    ),
+    array(
+      'id'    => 'auth-btn-text',
+      'type'  => 'text',
+      'title' => 'متن دکمه',
+      'dependency' => array('auth-btn-type', '==', 'link')
+    ),
+    array(
+      'id'    => 'auth-btn-link',
+      'type'  => 'text',
+      'title' => 'لینک دکمه',
+      'dependency' => array('auth-btn-type', '==', 'link')
+    ),
+    array(
+      'id'    => 'phone-number-header',
+      'type'  => 'text',
+      'title' => 'شماره تماس',
+      'dependency' => array('header-type', '==', 'default')
+    ),
+  ),
+  ));
     CSF::createSection( $prefix, array(
-    'title'  => 'فونت استایل',
+    'title'  => 'استایل',
     'fields' => array(
 
       array(
@@ -61,6 +90,12 @@ if( class_exists( 'CSF' ) ) {
         'dana'  => 'dana',
       ),
       'default'     => 'iransans'
+    ),
+    array(
+    'id'    => 'main-coloe',
+    'type'  => 'color',
+    'title' => 'رنگ اصلی سایت',
+    'default' => '#008ECC',
     ),
 
       ),
