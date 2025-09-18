@@ -71,7 +71,6 @@ a{
     position: relative;
 }
 .icon-header{
-    color: #008ECC;
     font-size: 15px;
 }
 .top-header {
@@ -144,10 +143,8 @@ position: absolute;
 }
 .phone-header{
     font-size: 16px;
-    color: #008ECC;
 }
 a.auth-holder{
-    background-color: #008ECC;
     box-shadow: 0 0 10px #b3b3b321;
     padding: 12px 12px;
     border-radius: 8px;
