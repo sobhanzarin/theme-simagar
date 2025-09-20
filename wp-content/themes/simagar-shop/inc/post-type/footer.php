@@ -9,7 +9,7 @@ function simagar_footer_post_type() {
 			),
 				'public'      => true,
 				'has_archive' => true,
-				'menu_iaon' => SIMAGAR_THEME_URL .'assets/img/footer.svg',
+				'menu_icon' => SIMAGAR_THEME_URL .'assets/img/footer.svg',
                 'rewrite' => array('slug' => 'simagarfooter')
 		)
 	);

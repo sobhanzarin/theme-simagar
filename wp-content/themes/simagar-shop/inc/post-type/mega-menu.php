@@ -9,6 +9,7 @@ function simagar_megamenu_post_type() {
 			),
 				'public'      => true,
 				'has_archive' => true,
+				'menu_icon' =>  SIMAGAR_THEME_URL . 'assets/img/megamenu.svg',
                 'rewrite' => array('slug' => 'simagarmegamenu')
 		)
 	);
