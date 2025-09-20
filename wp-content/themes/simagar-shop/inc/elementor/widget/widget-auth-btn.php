@@ -45,19 +45,12 @@ class Simagar_Widget_Auth_Btn extends \Elementor\Widget_Base {
                 'label' => "رنگ متن"
             ]
             );
-            $this->add_control(
-            'font-size',
-            [
-                'type' => \Elementor\Controls_Manager::COLOR,
-                'label' => "رنگ متن"
-            ]
-            );
 
         $this->end_controls_section();
     }
 
 	protected function render() {
-        $setting_style = $this->get_settings_for_display();
+        $setting = $this->get_settings_for_display();
         $header_type = simagar_setting('header-type');
         $auth_btn_link = simagar_setting('auth-btn-link');
         $auth_btn_type = simagar_setting('auth-btn-type');
@@ -67,12 +60,12 @@ class Simagar_Widget_Auth_Btn extends \Elementor\Widget_Base {
                 <?php if($auth_btn_type == 'link'): ?>
                           <!-- check login user  -->
                         <?php if(is_user_logged_in()): ?>
-                            <a class="auth-holder" href="<?php echo esc_url($account_link);?>" style="border-radius: <?php echo $setting_style['border'] ?>px; color: <?php echo $setting_style['color'] ?>; background: <?Php echo $setting_style['back'] ?> ">
+                            <a class="auth-holder" href="<?php echo esc_url($account_link);?>" style="border-radius: <?php echo $setting['border'] ?>px; color: <?php echo $setting['color'] ?>; background: <?Php echo $setting['back'] ?> ">
                                 <i class="icon-header fa-regular fa-user"></i>
                                حساب کاربری
                             </a>
                         <?php else: ?>
-                            <a class="auth-holder" href="<?php echo esc_attr($auth_btn_link); ?>" style="border-radius: <?php echo $setting_style['border'] ?>px; color: <?php echo $setting_style['color'] ?>; background: <?Php echo $setting_style['back']?> ">
+                            <a class="auth-holder" href="<?php echo esc_attr($auth_btn_link); ?>" style="border-radius: <?php echo $setting['border'] ?>px; color: <?php echo $setting['color'] ?>; background: <?Php echo $setting['back']?> ">
                                 <i class="icon-header fa-regular fa-user"></i>
                                 <?php echo esc_html($auth_btn_text); ?>
                             </a>
@@ -81,12 +74,12 @@ class Simagar_Widget_Auth_Btn extends \Elementor\Widget_Base {
                     <?php else: ?>
                         <!-- check login user  -->
                         <?php if(is_user_logged_in()): ?>
-                            <a class="auth-holder" href="<?php echo esc_url($account_link); ?>" style="border-radius: <?php echo $setting_style['border'] ?>px; color: <?php echo $setting_style['color'] ?>; background: <?Php echo $setting_style['back']?> ">
+                            <a class="auth-holder" href="<?php echo esc_url($account_link); ?>" style="border-radius: <?php echo $setting['border'] ?>px; color: <?php echo $setting['color'] ?>; background: <?Php echo $setting['back']?> ">
                                 <i class="icon-header fa-regular fa-user"></i>
                                حساب کاربری
                             </a>
                         <?php else: ?>
-                          <a class="auth-holder" id="btn-auth" href="" style="border-radius: <?php echo $setting_style['border'] ?>px; color: <?php echo $setting_style['color'] ?>; background: <?Php echo $setting_style['back']?> ">
+                          <a class="auth-holder" id="btn-auth" href="" style="border-radius: <?php echo $setting['border'] ?>px; color: <?php echo $setting['color'] ?>; background: <?Php echo $setting['back']?> ">
                             <i class="icon-header fa-regular fa-user"></i>
                             ورود | ثبت نام
                         </a>
