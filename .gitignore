@@ -1,0 +1,37 @@
+# Composer
+/vendor/
+composer.lock
+
+# WordPress core (if present)
+wp/
+wp-admin/
+wp-includes/
+
+# WP content
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+
+# Build / distribution
+dist/
+build/
+*.zip
+*.tar.gz
+*.rar
+
+# Logs & env
+.env
+*.log
+debug.log
+
+# OS & editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.iml
+
+# Temp / backups
+*.bak
+*.tmp
+*.swp

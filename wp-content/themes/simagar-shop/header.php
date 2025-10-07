@@ -7,19 +7,30 @@
     $auth_btn_link = simagar_setting('auth-btn-link');
     $account_link = get_permalink(get_option("woocommerce_myaccount_page_id"));
     $phone_header = simagar_setting('phone-number-header');
+    $header_ele = simagar_setting('header-elementor');
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes() ?> > 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>simagar shop</title>
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> >
-
+    <?php if($header_type === 'elementor') : ?> 
     <div>
-    <?php if($header_type == 'elementor') : ?>
+        <?php
+        if($header_ele) {
+            $post = get_post($header_ele);
+            if(get_post_status($header_ele) and get_post_type($header_ele) === "simagarheader"){
+            setup_postdata($post);
+            }
+            the_content();
+        } 
+
+        wp_reset_postdata();
+        ?>
+    </div>
     <?php else: ?>
          <div class="top-header py-3">
             <div class="container d-flex align-items-center justify-content-between">

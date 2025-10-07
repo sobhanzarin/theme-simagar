@@ -53,7 +53,7 @@ a{
     font-size: 14px;
 }
 #form-search .header-search-box{
-    min-width: 450px;
+    width: 100%;
 }
 .header-search-box:focus{
     box-shadow: none !important;
@@ -61,14 +61,16 @@ a{
 }
 .btn-search-header{
     position: absolute;
-    left: 11px;
-    top: 19px;
+    top: 0;
+    bottom: 0;
+    left: 0;
     background-color: inherit;
     border: 0 none;
-    padding: 0;
+    padding: 10px;
 }
 #form-search{
     position: relative;
+    width: 500px;
 }
 .icon-header{
     font-size: 15px;
