@@ -14,6 +14,20 @@ wp-content/jetpack-waf/
 wp-content/cache/
 wp-content/upgrade/
 wp-content/plugins/
+wp-cron.php
+wp-links-opml.php
+wp-load.php
+license.txt
+wp-login.php
+wp-mail.php
+wp-settings.php
+wp-signup.php
+wp-trackback.php
+xmlrpc.php
+wp-config-sample.php
+wp-activate.php
+
+
 
 # Build / distribution
 dist/
