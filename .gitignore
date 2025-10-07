@@ -9,8 +9,10 @@ wp-includes/
 
 # WP content
 wp-content/uploads/
+wp-content/jetpack-waf/
 wp-content/cache/
 wp-content/upgrade/
+wp-content/plugins/
 
 # Build / distribution
 dist/
